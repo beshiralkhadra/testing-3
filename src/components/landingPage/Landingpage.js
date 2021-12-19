@@ -1,8 +1,14 @@
 import React from "react";
 import "./landingpage.css";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
-function Landingpage() {
+function Landingpage({ history }) {
+  const handlingOnclick = () => {
+    history.push({
+      pathname: `/choosing`,
+    });
+  };
   return (
     <div
       className="landing-page"
@@ -19,7 +25,10 @@ function Landingpage() {
             <button className="login-btn">Login</button>
           </li>
           <li>
-            <button className="signup-btn">Signup</button>
+            <Link to="/registration">
+              {" "}
+              <button className="signup-btn">Signup</button>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -33,8 +42,12 @@ function Landingpage() {
           aliquip ex ea commodo consequat
         </article>
         <div className="about-btns">
-          <button className="sign-btn" style={{ backgroundColor: "#EA0A0B" }}>
-            Contact Us
+          <button
+            className="sign-btn"
+            style={{ backgroundColor: "#EA0A0B" }}
+            onClick={handlingOnclick}
+          >
+            Start Your Journey With Us
           </button>
           <button className="sign-btn">Learn More</button>
         </div>
@@ -43,4 +56,4 @@ function Landingpage() {
   );
 }
 
-export default Landingpage;
+export default withRouter(Landingpage);

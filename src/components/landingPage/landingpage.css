@@ -9,10 +9,14 @@
   justify-content: space-between;
   padding: 1em;
 }
-
-img {
-  width: 5em;
+.navbar-landing img {
+  margin: auto 5em;
+  width: 6em;
 }
+nav ul {
+  margin: auto 5em;
+}
+
 nav ul li {
   list-style-type: none;
   display: inline-block;

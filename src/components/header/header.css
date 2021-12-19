@@ -1,0 +1,9 @@
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+.navbar-header img {
+  width: 3em;
+}
